@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rms",
+  "info": {
+    "name": "RM",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Cover": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "indicator_data": {
+      "type": "json"
+    },
+    "date_from": {
+      "type": "datetime"
+    },
+    "date_to": {
+      "type": "datetime"
+    },
+    "Visible": {
+      "type": "boolean"
+    },
+    "Title": {
+      "type": "string"
+    },
+    "Content": {
+      "type": "richtext"
+    }
+  }
+}
